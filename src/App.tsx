@@ -7,6 +7,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@utils";
 import Router from "./router";
+import { ToastContainer } from "react-toastify";
 
 function App() {
     return (
@@ -18,10 +19,12 @@ function App() {
                             <Router />
                         </BrowserRouter>
                     </PersistGate>
+                    <ToastContainer position="top-center" />
                 </ThemeProvider>
             </Provider>
         </>
     );
 }
+
 
 export default App;

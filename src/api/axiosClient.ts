@@ -1,16 +1,16 @@
 import axios from "axios";
-const queryString = require("query-string");
+import * as queryString from "query-string";
 import { store } from "@redux";
 
 const axiosClient = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: import.meta.env.VITE_REACT_APP_API_URL ?? "http://localhost:3000/api",
 
     headers: {
         "Content-Type": "application/json",
         "X-Requested-With": "XMLHttpRequest",
     },
 
-    paramsSerializer: (params) => queryString.stringify(params),
+    paramsSerializer: (params) => queryString.default.stringify(params),
 });
 
 axiosClient.interceptors.request.use((config: any) => {
@@ -19,7 +19,8 @@ axiosClient.interceptors.request.use((config: any) => {
     //   config.headers.Authorization = `Bearer ${token}`;
     //
     const token = store.getState().auth.auth?.accessToken;
-    config.headers["access-token"] = token;
+
+    config.headers.Authorization = `Bearer ${token}`;
 
     return config;
 });
@@ -41,4 +42,4 @@ axiosClient.interceptors.response.use(
     }
 );
 
-export default axiosClient;
+export { axiosClient };

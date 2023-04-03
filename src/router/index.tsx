@@ -1,7 +1,7 @@
 import { useLocation, useNavigate, useRoutes } from "react-router-dom";
 
 import { AppLayout, AuthLayout } from "@layouts";
-import { HomePage, LoginPage } from "@pages";
+import { LoginPage, HomePage } from "@pages";
 import { selectAuth, useAppSelector } from "@redux";
 import { useEffect } from "react";
 
@@ -10,7 +10,7 @@ export const PATH_FORGOT_PASSWORD = "/forgot-password";
 export const PATH_VERIFY_CODE = "/verify-code";
 export const PATH_RESET_PASSWORD = "/reset-password";
 
-export const PATH_HOME = "/";
+export const PATH_HOME = "/home";
 
 const normalRoutes = [PATH_HOME];
 const authRoutes = [PATH_LOGIN, PATH_FORGOT_PASSWORD, PATH_VERIFY_CODE, PATH_RESET_PASSWORD];
@@ -67,7 +67,7 @@ function Router() {
                 navigate(PATH_HOME);
             }
         } else if (isNormalRoute) {
-            navigate(PATH_LOGIN);
+            navigate(PATH_HOME);
         }
     }, [auth, pathname]);
 

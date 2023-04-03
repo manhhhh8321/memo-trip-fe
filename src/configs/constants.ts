@@ -11,3 +11,17 @@ export const MODAL_PERMISSION_EDIT = 2;
 export const MODAL_PERMISSION_INFO = 3;
 
 export const INTRO = "Hello, this template is created for react dev!";
+
+export const DESCRIPTION = [
+  'House',
+  'Apartment',
+  'Villa',
+  'Condo',
+  'Townhouse',
+  'Cabin',
+  'Bungalow',
+  'Loft',
+  'Studio',
+  'Treehouse',
+  'Boat',
+];

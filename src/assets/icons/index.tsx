@@ -99,3 +99,53 @@ export const BackIcon = () => {
         </svg>
     );
 };
+
+export const HouseIcon = () => {
+    return (
+        <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M3 9L12 2L21 9"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M9 22V12H15V22"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M9 14H15"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    );
+};
+
+export const ApartmentIcon = () => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M18 10.5V9h-1.5v1.5H18zM21 9v1.5h-1.5V9H21zM14.25 9v1.5h-3V9h3zm-4.5 0v1.5h-3V9h3zm-4.5 0v1.5H3V9h2.25zM21 13.5h-3V12h3v1.5zm-4.5 0h-3V12h3v1.5zm-4.5 0h-3V12h3v1.5zm-4.5 0h-3V12h3v1.5zm13.5 1.5H3V15h21v1.5zm0 3H3V18h21v1.5zm0 3H3v-1.5h21V21z" />
+        </svg>
+    );
+};
+
+export const VillaIcon = () => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21 10.5h-3V6h-3v4.5h-3V3h-3v15h3v-4.5h3V21h3V10.5zM6 18H4.5v-4.5H6V18zM9 6V4.5h1.5V6H9zM15 6V4.5h1.5V6H15zM9 21V9h6v12H9zM12 6v1.5h-3V6h3z" />
+        </svg>
+    );
+};
